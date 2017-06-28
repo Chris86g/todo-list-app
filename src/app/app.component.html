@@ -2,14 +2,14 @@
   <h1>
     To do list
   </h1>
-  <input type="text"[(ngModel)]="task" placeholder="Type new task here">
-  <button>Add</button>
+  <div class="input-group">
+    <input type="text"[(ngModel)]="task" placeholder="Type new task here">
+    <button class="input-group-addon btn btn-outline-primary">Add</button>
+  </div>
   <p> {{task}} </p>
   <div class="btn-group">
-    <button>Done</button>
-    <button>Edit</button>
-    <button>Del</button>
+    <button type="button" class="btn btn-outline-success">Done</button>
+    <button type="button" class="btn btn-outline-primary">Edit</button>
+    <button type="button" class="btn btn-outline-danger">Del</button>
   </div>
     <!-- <div *ngFor="task of taskList"></div> -->
-
-</div>

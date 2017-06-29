@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
 
-interface task {
+export class task {
+  constructor (
   name: string,
-  done: boolean
+  done: boolean){
+
+  }
 }
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 
+
 export class AppComponent {
-  taskList = [
-    {
-      name: 'shopping',
-      done: false
-    },
-    {
-      name: 'MOT test',
-      done: false
-    }
-  ]
+  taskList: Array<task>;
+
+  constructor() {
+    this.taskList = new Array<task>();
+    this.taskList.push(new task("dupa",false))
+  }
 }

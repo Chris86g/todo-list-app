@@ -1,10 +1,10 @@
-<div style="text-align:center">
+<section class="container">
   <h1>
     To do list
   </h1>
   <div class="input-group">
     <input type="text"[(ngModel)]="task" placeholder="Type new task here">
-    <button class="input-group-addon btn btn-outline-primary">Add</button>
+    <button id="add" class="input-group-addon btn btn-outline-primary add">Add</button>
   </div>
   <p> {{task}} </p>
   <table>
@@ -14,8 +14,8 @@
     </tr>
   </table>
   <div class="btn-group">
-    <button type="button" class="btn btn-outline-success">Done</button>
-    <button type="button" class="btn btn-outline-primary">Edit</button>
-    <button type="button" class="btn btn-outline-danger">Del</button>
+    <button type="button" id="done" class="btn btn-outline-success done">Done</button>
+    <button type="button" id="edit" class="btn btn-outline-primary edit">Edit</button>
+    <button (click)="delTask(task)" type="button" id="del" class="btn btn-outline-danger del">Del</button>
   </div>
-</div>
+</section>
